@@ -11,7 +11,7 @@ main(int argc, char **argv)
 	}
 
 	char buffer[4096];
-	sprintf(buffer, "HandBrakeCLI -Z \"Super HQ 1080p30 Surround\" -i %s -o $(basename %s).mp4 --optimize\n", argv[1], argv[1]);
+	sprintf(buffer, "HandBrakeCLI -i %s -o $(basename %s).mp4 --optimize -e x264\n", argv[1], argv[1]);
 
 	printf("Executing: %s", buffer);
 	
